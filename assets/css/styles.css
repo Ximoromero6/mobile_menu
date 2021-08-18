@@ -17,9 +17,12 @@ header#header {
   width: 100%;
   padding-top: 60px;
   height: 0;
-  background: #FF4E50;
-  background: -webkit-gradient(linear, left top, right top, from(#F9D423), to(#FF4E50));
-  background: linear-gradient(to right, #F9D423, #FF4E50);
+  background: #d9a7c7;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#fffcdc), to(#d9a7c7));
+  background: linear-gradient(to right, #fffcdc, #d9a7c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header#header button#open_menu_button {
@@ -31,8 +34,8 @@ header#header button#open_menu_button {
 }
 
 header#header button#open_menu_button img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -74,11 +77,15 @@ header#header ul#menu li a {
 }
 
 header#header ul#menu li a img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 8px;
+}
+
+header#header ul#menu li a:hover {
+  background-color: #eee;
 }
 
 header#header ul#menu li a.active {
@@ -90,11 +97,15 @@ header#header ul#menu .overlay_menu_mobile {
   left: 100%;
   top: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  width: calc(15% + 20px);
+  width: calc(15% + 9px);
   height: 100vh;
   opacity: 0;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+}
+
+header#header ul#menu .overlay_menu_mobile.hidden {
+  visibility: hidden;
+  opacity: 0;
+  /* transition: visibility 0s .1s, opacity .1s linear; */
 }
 
 header#header ul#menu.open {
