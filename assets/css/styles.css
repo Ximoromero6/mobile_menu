@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+header#header {
+  position: relative;
+  width: 100%;
+  padding-top: 60px;
+  height: 0;
+  background: #FF4E50;
+  background: -webkit-gradient(linear, left top, right top, from(#F9D423), to(#FF4E50));
+  background: linear-gradient(to right, #F9D423, #FF4E50);
+}
+
+header#header button#open_menu_button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  left: 20px;
+  top: 20px;
+}
+
+header#header button#open_menu_button img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header#header ul#menu {
+  width: 85%;
+  height: 100vh;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+  top: -60px;
+  left: -425px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+header#header ul#menu li {
+  list-style: none;
+}
+
+header#header ul#menu li a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 6px;
+  border-radius: 6px;
+  color: #222;
+  font-weight: 600;
+}
+
+header#header ul#menu li a img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 8px;
+}
+
+header#header ul#menu li a.active {
+  background-color: #eee;
+}
+
+header#header ul#menu .overlay_menu_mobile {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: calc(15% + 20px);
+  height: 100vh;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+header#header ul#menu.open {
+  left: 0;
+}
+
+header#header ul#menu.open .overlay_menu_mobile {
+  opacity: 1;
+}
+
+main {
+  padding: 15px;
+}
+
+main h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+main p {
+  text-align: justify;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=styles.css.map */
