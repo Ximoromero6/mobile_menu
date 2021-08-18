@@ -41,7 +41,7 @@ header#header button#open_menu_button img {
 }
 
 header#header ul#menu {
-  width: 85%;
+  width: 83%;
   height: 100vh;
   background-color: #fff;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -53,6 +53,116 @@ header#header ul#menu {
   left: -425px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+header#header ul#menu .logo_section {
+  padding: 10px 0 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header#header ul#menu .logo_section a.logo {
+  text-decoration: none;
+  font-size: 25px;
+  color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-weight: 600;
+}
+
+header#header ul#menu .logo_section a.logo img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 8px;
+}
+
+header#header ul#menu .logo_section .label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+header#header ul#menu .logo_section .toggle {
+  isolation: isolate;
+  position: relative;
+  height: 24px;
+  width: 48px;
+  border-radius: 15px;
+  background: #d6d6d6;
+  overflow: hidden;
+}
+
+header#header ul#menu .logo_section .toggle-inner {
+  z-index: 2;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 22px;
+  width: 46px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+header#header ul#menu .logo_section .active-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200%;
+  background: #d9a7c7;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  -webkit-transition: -webkit-transform 0.05s linear 0.17s;
+  transition: -webkit-transform 0.05s linear 0.17s;
+  transition: transform 0.05s linear 0.17s;
+  transition: transform 0.05s linear 0.17s, -webkit-transform 0.05s linear 0.17s;
+}
+
+header#header ul#menu .logo_section .toggle-state {
+  display: none;
+}
+
+header#header ul#menu .logo_section .indicator {
+  height: 100%;
+  width: 200%;
+  background: white;
+  border-radius: 13px;
+  -webkit-transform: translate3d(-75%, 0, 0);
+          transform: translate3d(-75%, 0, 0);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  transition: -webkit-transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35), -webkit-transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+header#header ul#menu .logo_section .toggle-state:checked ~ .active-bg {
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+}
+
+header#header ul#menu .logo_section .toggle-state:checked ~ .toggle-inner .indicator {
+  -webkit-transform: translate3d(25%, 0, 0);
+          transform: translate3d(25%, 0, 0);
 }
 
 header#header ul#menu li {
@@ -107,7 +217,7 @@ header#header .overlay_menu_mobile {
   right: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  width: calc(15% + 9px);
+  width: 100%;
   height: 100vh;
   opacity: 0;
   -webkit-transition: all .1s;
@@ -117,7 +227,6 @@ header#header .overlay_menu_mobile {
 header#header .overlay_menu_mobile.hidden {
   visibility: hidden;
   opacity: 0;
-  /*   transition: visibility 0s .5s, opacity .5s linear; */
 }
 
 main {
