@@ -28,6 +28,7 @@ header#header button#open_menu_button {
   border: none;
   left: 20px;
   top: 20px;
+  z-index: 2;
 }
 
 header#header button#open_menu_button img {
