@@ -85,28 +85,32 @@ header#header {
             }
         }
 
-        .overlay_menu_mobile {
-            position: absolute;
-            left: 100%;
-            top: 0;
-            background-color: rgba(0, 0, 0, .3);
-            width: calc(15% + 9px);
-            height: 100vh;
-            opacity: 0;
 
-            &.hidden {
-                visibility: hidden;
-                opacity: 0;
-                /* transition: visibility 0s .1s, opacity .1s linear; */
-            }
-        }
 
         &.open {
             left: 0;
 
-            .overlay_menu_mobile {
+            ~.overlay_menu_mobile {
                 opacity: 1;
+                transition: all .8s;
             }
+        }
+    }
+
+    .overlay_menu_mobile {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, .3);
+        width: calc(15% + 9px);
+        height: 100vh;
+        opacity: 0;
+        transition: all .1s;
+
+        &.hidden {
+            visibility: hidden;
+            opacity: 0;
+            /*   transition: visibility 0s .5s, opacity .5s linear; */
         }
     }
 }
