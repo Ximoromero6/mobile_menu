@@ -7,8 +7,8 @@ document.querySelector("#open_menu_button").addEventListener("click", () => {
     overlay_menu.classList.remove("hidden");
 });
 
-overlay_menu.addEventListener("click", (el) => {
-    el.target.classList.add("hidden");
+overlay_menu.addEventListener("click", () => {
+    this.classList.add("hidden");
     menu.classList.remove("open");
 });
 })();
