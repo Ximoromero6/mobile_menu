@@ -8,7 +8,7 @@ document.querySelector("#open_menu_button").addEventListener("click", () => {
 });
 
 overlay_menu.addEventListener("click", (el) => {
-    el.classList.add("hidden");
+    el.target.classList.add("hidden");
     menu.classList.remove("open");
 });
 })();
