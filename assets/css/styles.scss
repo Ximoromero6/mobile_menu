@@ -17,14 +17,9 @@ header#header {
     width: 100%;
     padding-top: 60px;
     height: 0;
-    background: #d9a7c7;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #fffcdc, #d9a7c7);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+    background: #FF416C;
+    background: -webkit-linear-gradient(to left, #FF4B2B, #FF416C);
+    background: linear-gradient(to left, #FF4B2B, #FF416C);
 
     button#open_menu_button {
         position: absolute;
@@ -49,7 +44,7 @@ header#header {
         z-index: 2;
         position: relative;
         top: -60px;
-        left: -425px;
+        left: -1000px;
         transition: all .2s ease-in-out;
 
         .logo_section {
@@ -108,7 +103,7 @@ header#header {
                 left: 0;
                 height: 100%;
                 width: 200%;
-                background: #d9a7c7;
+                background: #BC243C;
                 transform: translate3d(-100%, 0, 0);
                 transition: transform 0.05s linear 0.17s;
             }

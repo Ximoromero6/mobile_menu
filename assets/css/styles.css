@@ -17,12 +17,9 @@ header#header {
   width: 100%;
   padding-top: 60px;
   height: 0;
-  background: #d9a7c7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#fffcdc), to(#d9a7c7));
-  background: linear-gradient(to right, #fffcdc, #d9a7c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FF416C;
+  background: -webkit-gradient(linear, right top, left top, from(#FF4B2B), to(#FF416C));
+  background: linear-gradient(to left, #FF4B2B, #FF416C);
 }
 
 header#header button#open_menu_button {
@@ -50,7 +47,7 @@ header#header ul#menu {
   z-index: 2;
   position: relative;
   top: -60px;
-  left: -425px;
+  left: -1000px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -129,7 +126,7 @@ header#header ul#menu .logo_section .active-bg {
   left: 0;
   height: 100%;
   width: 200%;
-  background: #d9a7c7;
+  background: #BC243C;
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
   -webkit-transition: -webkit-transform 0.05s linear 0.17s;
