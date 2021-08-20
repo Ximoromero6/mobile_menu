@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Variables */
+
+$negro: #111;
+$blanco: #fffafa;
+$grisOscuro: #222;
+$grisOscuroHover: rgba(0, 0, 0, 0.5);
+$grisClaro: #C8C8C8;
+$grisClaroHover: #eee;
+$rojo1: #FF4B2B;
+$rojo2: #FF416C;
+$rojo_oscuro: #BC243C;
+
+$sombra: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+$sombraDark: 10px 10px 20px rgba(170, 170, 170, .16);
+$sombraLight: 10px 10px 20px rgba(0, 0, 0, .16);
+
+/* Variables */
+
 * {
     padding: 0;
     margin: 0;
@@ -9,6 +29,12 @@
 body {
     width: 100%;
     font-family: 'Space Grotesk', sans-serif;
+    transition: .3s ease all;
+
+    &.dark {
+        background-color: $negro;
+        color: $blanco;
+    }
 }
 
 header#header {
@@ -16,9 +42,10 @@ header#header {
     width: 100%;
     padding-top: 60px;
     height: 0;
-    background: #FF416C;
-    background: -webkit-linear-gradient(to left, #FF4B2B, #FF416C);
-    background: linear-gradient(to left, #FF4B2B, #FF416C);
+    background: $rojo2;
+    background: -webkit-linear-gradient(to left, $rojo1, $rojo2);
+    background: linear-gradient(to left, $rojo1, $rojo2);
+
     button#open_menu_button {
         position: absolute;
         background-color: transparent;
@@ -26,36 +53,45 @@ header#header {
         left: 20px;
         top: 20px;
         z-index: 2;
+
         img {
             width: 25px;
             height: 25px;
             object-fit: cover;
+
+            body.dark & {
+                filter: invert(1);
+            }
         }
     }
+
     ul#menu {
         width: 83%;
         height: 100vh;
-        background-color: #fff;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        background-color: $blanco;
+        box-shadow: $sombra;
         padding: 20px;
         z-index: 2;
         position: relative;
         top: -60px;
         left: -1000px;
         transition: all .2s ease-in-out;
+
         .logo_section {
             padding: 10px 0 30px 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             a.logo {
                 text-decoration: none;
                 font-size: 25px;
-                color: #222;
+                color: $grisOscuro;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 font-weight: 600;
+
                 img {
                     width: 30px;
                     height: 30px;
@@ -63,20 +99,23 @@ header#header {
                     margin-right: 8px;
                 }
             }
+
             .label {
                 display: inline-flex;
                 align-items: center;
                 cursor: pointer;
             }
+
             .toggle {
                 isolation: isolate;
                 position: relative;
                 height: 24px;
                 width: 48px;
                 border-radius: 15px;
-                background: #d6d6d6;
+                background: $grisClaro;
                 overflow: hidden;
             }
+
             .toggle-inner {
                 z-index: 2;
                 position: absolute;
@@ -87,36 +126,43 @@ header#header {
                 border-radius: 15px;
                 overflow: hidden;
             }
+
             .active-bg {
                 position: absolute;
                 top: 0;
                 left: 0;
                 height: 100%;
                 width: 200%;
-                background: #BC243C;
+                background: $rojo_oscuro;
                 transform: translate3d(-100%, 0, 0);
                 transition: transform 0.05s linear 0.17s;
             }
+
             .toggle-state {
                 display: none;
             }
+
             .indicator {
                 height: 100%;
                 width: 200%;
-                background: white;
+                background: $blanco;
                 border-radius: 13px;
                 transform: translate3d(-75%, 0, 0);
                 transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
             }
+
             .toggle-state:checked~.active-bg {
                 transform: translate3d(-50%, 0, 0);
             }
+
             .toggle-state:checked~.toggle-inner .indicator {
                 transform: translate3d(25%, 0, 0);
             }
         }
+
         li {
             list-style: none;
+
             a {
                 text-decoration: none;
                 display: flex;
@@ -124,31 +170,64 @@ header#header {
                 justify-content: flex-start;
                 padding: 10px 6px;
                 border-radius: 6px;
-                color: #222;
+                color: $grisOscuro;
                 font-weight: 600;
+
                 img {
                     width: 25px;
                     height: 25px;
                     object-fit: cover;
                     margin-right: 8px;
                 }
-                span {}
+
                 &:hover {
-                    background-color: #eee;
+                    background-color: $grisClaroHover;
                 }
+
                 &.active {
-                    background-color: #eee;
+                    background-color: $grisClaroHover;
                 }
             }
         }
+
         &.open {
             left: 0;
+
             ~.overlay_menu_mobile {
                 opacity: 1;
                 transition: all .8s;
             }
         }
+
+        body.dark & {
+            background-color: $negro;
+
+            .logo_section {
+                a.logo {
+                    color: $blanco;
+                }
+            }
+
+            li {
+                a {
+                    color: $blanco;
+
+                    img {
+                        filter: invert(1);
+                    }
+
+                    &:hover {
+                        background: $grisOscuroHover;
+                    }
+
+                    &.active {
+                        background: $grisOscuroHover;
+                    }
+                }
+            }
+        }
     }
+
     .overlay_menu_mobile {
         position: absolute;
         right: 0;
@@ -158,19 +237,26 @@ header#header {
         height: 100vh;
         opacity: 0;
         transition: all .1s;
+
         &.hidden {
             visibility: hidden;
             opacity: 0;
         }
     }
+
+    @media(min-width: 576px) {
+        display: none;
+    }
 }
 
 main {
     padding: 15px;
+
     h1 {
         font-size: 30px;
         margin-bottom: 15px;
     }
+
     p {
         text-align: justify;
         margin: 10px 0;

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+/* Variables */
+/* Variables */
 * {
   padding: 0;
   margin: 0;
@@ -10,6 +12,13 @@
 body {
   width: 100%;
   font-family: 'Space Grotesk', sans-serif;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+body.dark {
+  background-color: #111;
+  color: #fffafa;
 }
 
 header#header {
@@ -38,10 +47,15 @@ header#header button#open_menu_button img {
      object-fit: cover;
 }
 
+body.dark header#header button#open_menu_button img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 header#header ul#menu {
   width: 83%;
   height: 100vh;
-  background-color: #fff;
+  background-color: #fffafa;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding: 20px;
@@ -106,7 +120,7 @@ header#header ul#menu .logo_section .toggle {
   height: 24px;
   width: 48px;
   border-radius: 15px;
-  background: #d6d6d6;
+  background: #C8C8C8;
   overflow: hidden;
 }
 
@@ -143,7 +157,7 @@ header#header ul#menu .logo_section .toggle-state {
 header#header ul#menu .logo_section .indicator {
   height: 100%;
   width: 200%;
-  background: white;
+  background: #fffafa;
   border-radius: 13px;
   -webkit-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
@@ -210,6 +224,31 @@ header#header ul#menu.open ~ .overlay_menu_mobile {
   transition: all .8s;
 }
 
+body.dark header#header ul#menu {
+  background-color: #111;
+}
+
+body.dark header#header ul#menu .logo_section a.logo {
+  color: #fffafa;
+}
+
+body.dark header#header ul#menu li a {
+  color: #fffafa;
+}
+
+body.dark header#header ul#menu li a img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+body.dark header#header ul#menu li a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body.dark header#header ul#menu li a.active {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 header#header .overlay_menu_mobile {
   position: absolute;
   right: 0;
@@ -225,6 +264,12 @@ header#header .overlay_menu_mobile {
 header#header .overlay_menu_mobile.hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+@media (min-width: 576px) {
+  header#header {
+    display: none;
+  }
 }
 
 main {
