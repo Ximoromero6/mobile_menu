@@ -181,11 +181,11 @@ header#header {
                 }
 
                 &:hover {
-                    background-color: $grisClaroHover;
+                    background-color: $$grisOscuro;
                 }
 
                 &.active {
-                    background-color: $grisClaroHover;
+                    background-color: $$grisOscuro;
                 }
             }
         }
