@@ -17,18 +17,18 @@ body {
 }
 
 body.dark {
-  background-color: #111;
+  background-color: #222;
   color: #fffafa;
 }
 
 header#header {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
   padding-top: 60px;
   height: 0;
-  background: #FF416C;
-  background: -webkit-gradient(linear, right top, left top, from(#FF4B2B), to(#FF416C));
-  background: linear-gradient(to left, #FF4B2B, #FF416C);
+  background-color: #111;
 }
 
 header#header button#open_menu_button {
@@ -40,16 +40,9 @@ header#header button#open_menu_button {
   z-index: 2;
 }
 
-header#header button#open_menu_button img {
-  width: 25px;
-  height: 25px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-body.dark header#header button#open_menu_button img {
-  -webkit-filter: invert(1);
-          filter: invert(1);
+header#header button#open_menu_button i {
+  font-size: 20px;
+  color: #fffafa;
 }
 
 header#header ul#menu {
@@ -58,7 +51,7 @@ header#header ul#menu {
   background-color: #fffafa;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  padding: 20px;
+  padding: 15px;
   z-index: 2;
   position: relative;
   top: -60px;
@@ -192,10 +185,12 @@ header#header ul#menu li a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 10px 6px;
+  padding: .7rem .5rem;
   border-radius: 6px;
   color: #222;
   font-weight: 600;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 header#header ul#menu li a img {
@@ -204,6 +199,12 @@ header#header ul#menu li a img {
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 8px;
+}
+
+header#header ul#menu li a i {
+  font-size: 25px;
+  margin-right: 8px;
+  font-weight: lighter;
 }
 
 header#header ul#menu li a:hover {
@@ -281,8 +282,23 @@ main h1 {
   margin-bottom: 15px;
 }
 
+main h1:not(:first-child) {
+  margin-top: 15px;
+}
+
 main p {
   text-align: justify;
   margin: 10px 0;
+}
+
+main .main_image_home {
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 15px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,4 @@
-(function () {
+(function() {
     let menu = document.querySelector("#menu"),
         overlay_menu = document.querySelector(".overlay_menu_mobile"),
         open_menu_button = document.querySelector("#open_menu_button");
@@ -36,5 +36,19 @@
         change_theme_button.classList.remove("active-bg");
         change_theme_button.checked = false;
     }
+
+    //Detectar scroll
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        console.log(st);
+        if (st > lastScrollTop) {
+
+        } else {
+
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+    }, false);
 
 })();
