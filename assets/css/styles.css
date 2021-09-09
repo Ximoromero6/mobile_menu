@@ -11,9 +11,9 @@
 
 body {
   width: 100%;
-  font-family: "Space Grotesk", sans-serif;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 body.dark {
@@ -56,8 +56,8 @@ header#header ul#menu {
   position: relative;
   top: -60px;
   left: -1000px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 header#header ul#menu .logo_section {
@@ -113,7 +113,7 @@ header#header ul#menu .logo_section .toggle {
   height: 24px;
   width: 48px;
   border-radius: 15px;
-  background: #c8c8c8;
+  background: #C8C8C8;
   overflow: hidden;
 }
 
@@ -134,7 +134,7 @@ header#header ul#menu .logo_section .active-bg {
   left: 0;
   height: 100%;
   width: 200%;
-  background: #bc243c;
+  background: #BC243C;
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
   -webkit-transition: -webkit-transform 0.05s linear 0.17s;
@@ -185,12 +185,12 @@ header#header ul#menu li a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 0.7rem 0.5rem;
+  padding: .7rem .5rem;
   border-radius: 6px;
   color: #222;
   font-weight: 600;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 header#header ul#menu li a img {
@@ -221,10 +221,8 @@ header#header ul#menu.open {
 
 header#header ul#menu.open ~ .overlay_menu_mobile {
   opacity: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  -webkit-transition: all .8s;
+  transition: all .8s;
 }
 
 body.dark header#header ul#menu {
@@ -245,11 +243,11 @@ body.dark header#header ul#menu li a img {
 }
 
 body.dark header#header ul#menu li a:hover {
-  background: #222;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 body.dark header#header ul#menu li a.active {
-  background: #222;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 header#header .overlay_menu_mobile {
@@ -260,8 +258,8 @@ header#header .overlay_menu_mobile {
   width: 100%;
   height: 100vh;
   opacity: 0;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
+  -webkit-transition: all .1s;
+  transition: all .1s;
 }
 
 header#header .overlay_menu_mobile.hidden {
