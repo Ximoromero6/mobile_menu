@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 /* Variables */
 
@@ -10,11 +10,11 @@ $grisOscuroHover: rgba(0,
 0,
 0,
 0.5);
-$grisClaro: #C8C8C8;
+$grisClaro: #c8c8c8;
 $grisClaroHover: #eee;
-$rojo1: #FF4B2B;
-$rojo2: #FF416C;
-$rojo_oscuro: #BC243C;
+$rojo1: #ff4b2b;
+$rojo2: #ff416c;
+$rojo_oscuro: #bc243c;
 $sombra: rgba(50,
 50,
 93,
@@ -26,11 +26,11 @@ rgba(0,
 $sombraDark: 10px 10px 20px rgba(170,
 170,
 170,
-.16);
+0.16);
 $sombraLight: 10px 10px 20px rgba(0,
 0,
 0,
-.16);
+0.16);
 
 /* Variables */
 
@@ -42,8 +42,8 @@ $sombraLight: 10px 10px 20px rgba(0,
 
 body {
     width: 100%;
-    font-family: 'Space Grotesk', sans-serif;
-    transition: .3s ease all;
+    font-family: "Space Grotesk", sans-serif;
+    transition: 0.3s ease all;
     &.dark {
         background-color: $grisOscuro;
         color: $blanco;
@@ -79,7 +79,7 @@ header#header {
         position: relative;
         top: -60px;
         left: -1000px;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         .logo_section {
             padding: 10px 0 30px 0;
             display: flex;
@@ -159,11 +159,11 @@ header#header {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                padding: .7rem .5rem;
+                padding: 0.7rem 0.5rem;
                 border-radius: 6px;
                 color: $grisOscuro;
                 font-weight: 600;
-                transition: .3s ease all;
+                transition: 0.3s ease all;
                 img {
                     width: 25px;
                     height: 25px;
@@ -187,7 +187,8 @@ header#header {
             left: 0;
             ~.overlay_menu_mobile {
                 opacity: 1;
-                transition: all .8s;
+                transition: all 0.5s;
+                backdrop-filter: blur(2px);
             }
         }
         body.dark & {
@@ -204,10 +205,10 @@ header#header {
                         filter: invert(1);
                     }
                     &:hover {
-                        background: $grisOscuroHover;
+                        background: $grisOscuro;
                     }
                     &.active {
-                        background: $grisOscuroHover;
+                        background: $grisOscuro;
                     }
                 }
             }
@@ -217,17 +218,17 @@ header#header {
         position: absolute;
         right: 0;
         top: 0;
-        background-color: rgba(0, 0, 0, .3);
+        background-color: rgba(0, 0, 0, 0.3);
         width: 100%;
         height: 100vh;
         opacity: 0;
-        transition: all .1s;
+        transition: all 0.1s;
         &.hidden {
             visibility: hidden;
             opacity: 0;
         }
     }
-    @media(min-width: 576px) {
+    @media (min-width: 576px) {
         display: none;
     }
 }
