@@ -48,6 +48,9 @@ body {
         background-color: $grisOscuro;
         color: $blanco;
     }
+    &.disableScroll {
+        overflow: hidden;
+    }
 }
 
 header#header {
@@ -70,7 +73,7 @@ header#header {
         }
     }
     ul#menu {
-        width: 83%;
+        width: 80%;
         height: 100vh;
         background-color: $blanco;
         box-shadow: $sombra;

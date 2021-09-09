@@ -21,6 +21,10 @@ body.dark {
   color: #fffafa;
 }
 
+body.disableScroll {
+  overflow: hidden;
+}
+
 header#header {
   position: -webkit-sticky;
   position: sticky;
@@ -46,7 +50,7 @@ header#header button#open_menu_button i {
 }
 
 header#header ul#menu {
-  width: 83%;
+  width: 80%;
   height: 100vh;
   background-color: #fffafa;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;

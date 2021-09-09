@@ -5,12 +5,14 @@
 
     open_menu_button.addEventListener("click", () => {
         menu.classList.add("open");
+        document.body.classList.add("disableScroll");
         overlay_menu.classList.remove("hidden");
     });
 
     overlay_menu.addEventListener("click", (el) => {
         el.target.classList.add("hidden");
         menu.classList.remove("open");
+        document.body.classList.remove("disableScroll");
     });
 
     //Dark mode
