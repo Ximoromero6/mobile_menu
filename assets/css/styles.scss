@@ -316,7 +316,7 @@ main {
         .fadeup-enter {
             h1 {
                 margin: 0px 0px 25px 4px;
-                color: #6B5B95;
+                color: #FF6F61;
                 font-family: 'Oxygen Mono', monospace;
                 font-size: clamp(14px, 5vw, 16px);
                 font-weight: 400;
@@ -347,9 +347,9 @@ main {
             a {
                 display: inline-block;
                 position: relative;
-                color: #6B5B95;
+                color: #FF6F61;
                 background-color: transparent;
-                border: 1px solid #6B5B95;
+                border: 1px solid #FF6F61;
                 border-radius: 4px;
                 padding: 1.25rem 1.75rem;
                 font-size: 14px;
@@ -362,10 +362,13 @@ main {
             }
         }
     }
-    body.dark &{
-        .fadeup-enter{
-            
-        }
+
+    body.dark & {
+        .fadeup-enter {}
+    }
+
+    @media(max-width: 480px) {
+        padding: 0 25px;
     }
 }
 
