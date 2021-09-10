@@ -1,4 +1,5 @@
-(function() {
+(function () {
+
     let menu = document.querySelector("#menu"),
         overlay_menu = document.querySelector(".overlay_menu_mobile"),
         open_menu_button = document.querySelector("#open_menu_button");
@@ -40,17 +41,32 @@
     }
 
     //Detectar scroll
-    let lastScrollTop = 0;
+    let header = document.querySelector("header#header");
 
-    window.addEventListener("scroll", function() {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        console.log(st);
-        if (st > lastScrollTop) {
+    window.addEventListener("scroll", function () {
+        let scrollPage = window.pageYOffset || document.documentElement.scrollTop;
 
-        } else {
+        scrollPage > 0 ? header.classList.add("scrolled") : header.classList.remove("scrolled");
 
-        }
-        lastScrollTop = st <= 0 ? 0 : st;
     }, false);
+
+    //ScrollReveal
+    ScrollReveal().reveal("body > main > h1:nth-child(1)", {
+        delay: 200
+    });
+
+    ScrollReveal().reveal("body > main > p:nth-child(2)", {
+        delay: 500
+    });
+
+    ScrollReveal().reveal("body > main > img:nth-child(3)", {
+        delay: 1000
+    });
+
+    /* document.querySelectorAll(".fadeup-enter").forEach((el) => {
+        el.addEventListener("animationend", () => {
+            el.classList.add("done");
+        })
+    }); */
 
 })();
