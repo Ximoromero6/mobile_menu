@@ -321,7 +321,7 @@ main .hero__first {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 0px;
 }
 
