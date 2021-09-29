@@ -74,6 +74,12 @@ header#header {
         left: 20px;
         top: 20px;
         z-index: 2;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         i {
             font-size: 25px;
@@ -188,7 +194,8 @@ header#header {
                 padding: 0.7rem 0.5rem;
                 border-radius: 6px;
                 color: $grisOscuro;
-                font-weight: 600;
+                font-weight: 500;
+                letter-spacing: 1px;
                 transition: 0.3s ease all;
 
                 img {
@@ -316,7 +323,7 @@ main {
         .fadeup-enter {
             h1 {
                 margin: 0px 0px 25px 4px;
-                color: #FF6F61;
+                color: #34568B;
                 font-family: 'Oxygen Mono', monospace;
                 font-size: clamp(14px, 5vw, 16px);
                 font-weight: 400;
@@ -347,9 +354,9 @@ main {
             a {
                 display: inline-block;
                 position: relative;
-                color: #FF6F61;
+                color: #34568B;
                 background-color: transparent;
-                border: 1px solid #FF6F61;
+                border: 2px solid #34568B;
                 border-radius: 4px;
                 padding: 1.25rem 1.75rem;
                 font-size: 14px;

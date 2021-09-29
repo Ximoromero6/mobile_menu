@@ -47,6 +47,18 @@ header#header button#open_menu_button {
   left: 20px;
   top: 20px;
   z-index: 2;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header#header button#open_menu_button i {
@@ -199,7 +211,8 @@ header#header ul#menu li a {
   padding: 0.7rem 0.5rem;
   border-radius: 6px;
   color: #222;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 1px;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
@@ -327,7 +340,7 @@ main .hero__first {
 
 main .hero__first .fadeup-enter h1 {
   margin: 0px 0px 25px 4px;
-  color: #FF6F61;
+  color: #34568B;
   font-family: 'Oxygen Mono', monospace;
   font-size: clamp(14px, 5vw, 16px);
   font-weight: 400;
@@ -358,9 +371,9 @@ main .hero__first .fadeup-enter p {
 main .hero__first .fadeup-enter a {
   display: inline-block;
   position: relative;
-  color: #FF6F61;
+  color: #34568B;
   background-color: transparent;
-  border: 1px solid #FF6F61;
+  border: 2px solid #34568B;
   border-radius: 4px;
   padding: 1.25rem 1.75rem;
   font-size: 14px;
