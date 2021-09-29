@@ -16,6 +16,7 @@ $grisClaroHover: #eee;
 $rojo1: #ff4b2b;
 $rojo2: #ff416c;
 $rojo_oscuro: #bc243c;
+$emerald: #009B77;
 $sombra: rgba(50,
     50,
     93,
@@ -155,7 +156,7 @@ header#header {
                 left: 0;
                 height: 100%;
                 width: 200%;
-                background: $rojo_oscuro;
+                background: $emerald;
                 transform: translate3d(-100%, 0, 0);
                 transition: transform 0.05s linear 0.17s;
             }
@@ -323,7 +324,7 @@ main {
         .fadeup-enter {
             h1 {
                 margin: 0px 0px 25px 4px;
-                color: #34568B;
+                color: $emerald;
                 font-family: 'Oxygen Mono', monospace;
                 font-size: clamp(14px, 5vw, 16px);
                 font-weight: 400;
@@ -354,9 +355,9 @@ main {
             a {
                 display: inline-block;
                 position: relative;
-                color: #34568B;
+                color: $emerald;
                 background-color: transparent;
-                border: 2px solid #34568B;
+                border: 2px solid $emerald;
                 border-radius: 4px;
                 padding: 1.25rem 1.75rem;
                 font-size: 14px;
